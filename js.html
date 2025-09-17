@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript in HTML</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- layout styles -->
+<style>
+    body { 
+      font-family: Arial; 
+    }
+    header, nav, main, aside, footer {
+      padding: 20px;
+      margin: 10px;
+      background-color: #f0f0f0;
+    }
+    nav {
+      background-color: #cde;
+      float: left;
+    }
+    main {
+      display: flex;
+    }
+    article {
+      flex: 3;  /* arranged side by side in row */
+      margin-right: 20px;
+    }
+    aside {
+      flex: 1;  /* take up 1 part of the available horizontal space. */
+    }
+
+  </style>
+<body>
+
+    <!-- simple alert message -->
+
+  <h2>Click the button</h2>
+  <button onclick="showMessage()">Click Me</button>
+
+  <script>
+    function showMessage() {
+      alert("Hello User.");
+    }
+  </script>
+
+    <!-- JavaScript can change styles: -->
+
+  <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "black";
+  document.getElementById("demo").style.backgroundColor = "pink";        
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+  <!-- disabled scripts -->
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+  <!-- file path -->
+
+
+  <!-- absolute file path -->
+  <h2>Full URL File Path</h2>
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain" style="width:300px"><br>
+
+
+  <!-- relative file path -->
+<img src="images/img3.svg" alt="Halleyx" width="300" height="200"><br>
+
+
+    <!-- html layouts(structure or arrangements of contents on web page) -->
+
+    <header>
+    <h1>My Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <article>
+      <h2>Main Article</h2>
+      <p>This is the main content of the page.</p>
+    </article>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is additional info.</p>
+    </aside>
+  </main>
+
+  <footer>
+    &copy; 2025 My Website
+  </footer><br><br>
+
+   <!-- css framework(bootstrap) -->
+
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4 bg-primary text-white">Sidebar</div>
+    <div class="col-md-8 bg-light">Main Content</div>
+  </div>
+</div><br><br>
+
+   <!-- css flex -->
+
+<div style="display: flex;">
+  <div style="flex: 1;">Sidebar</div>
+  <div style="flex: 3;">Main Content</div>
+</div><br><br>
+
+   <!-- css grid layout -->
+
+<div style="display: grid; grid-template-columns: 1fr 3fr;">
+  <div>Sidebar</div>
+  <div>Main Content</div>
+</div><br><br>
+
+   <!-- semantic elements -->
+
+ <article>   <!-- Self-contained content -->
+  <h2>Why Sleep is Important</h2>
+  <p>Sleep improves memory and mood...</p>
+
+  <aside>   <!--Sidebar or related content--> 
+    <h3>Quick Tip!</h3>
+    <p>Avoid screens 1 hour before bed for better sleep.</p>
+  </aside>
+</article>
+
+<figure>  <!-- wrap media content like images,videos and include caption-->
+  <img src="images/img3.svg" alt="Halleyx" width="300" height="200">
+  <figcaption>Halleyx Software Private Limited.</figcaption>
+</figure>
+
+<section>
+  <h2>About Us</h2>
+  <p>We are a tech company focused on web development and design.</p>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <ul>
+    <li>Website Design</li>
+    <li>SEO Optimization</li>
+    <li>App Development</li>
+  </ul>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 My Website. All rights reserved.</p>
+  <p>Contact us: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a></p>
+</footer><br><br>
+
+</body>
+</html>

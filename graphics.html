@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canvas Example</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+      display: block;
+      margin: 20px auto;
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+
+<!-- First canvas for line -->
+<canvas id="lineCanvas" width="200" height="100" style="margin-bottom: 20px;"></canvas>
+
+<script>
+var lineCanvas = document.getElementById("lineCanvas");
+var lineCtx = lineCanvas.getContext("2d");
+lineCtx.moveTo(0, 0);
+lineCtx.lineTo(200, 100);
+lineCtx.stroke();
+</script>
+
+<!-- Second canvas for circle -->
+<canvas id="circleCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+<script>
+var circleCanvas = document.getElementById("circleCanvas");
+var circleCtx = circleCanvas.getContext("2d");
+circleCtx.beginPath();
+circleCtx.arc(95, 50, 40, 0, 2 * Math.PI);
+circleCtx.stroke();
+</script>
+
+  <!-- third canvas for text -->
+
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Halleyx",10,50);
+</script>
+
+  <!-- fourth canvas for stroke text -->
+
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas3");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Halleyx",10,50);
+</script>
+
+  <!-- Draw Linear Gradient -->
+
+<canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas4");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+
+  <!-- Draw Circular Gradient -->
+
+<canvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas5");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+
+
+<!-- SVG GRAPHICS -->
+
+<!-- SVG Circle -->
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<!-- SVG rectangle -->
+
+<svg width="400" height="120">
+  <rect x="10" y="10" width="200" height="100" stroke="blue" stroke-width="6" fill="black" />
+</svg>
+
+ <!-- SVG Rectangle with Opacity and Rounded Corners -->
+
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+ <!-- SVG star (multiple straight lines-la form shape)-->
+
+<svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:rgb(125, 59, 184);stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+
+</body>
+</html>
